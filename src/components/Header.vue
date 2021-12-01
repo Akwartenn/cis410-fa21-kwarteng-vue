@@ -1,26 +1,35 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <router-link class="navbar-brand" to="/">Kwarteng Reviews</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link class="nav-link active" aria-current="page" to="/movies">Movies</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <router-link class="nav-link active" aria-current="page" to="/account">My Account</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <router-link class="nav-link active" aria-current="page" to="/login"><button class="btn-warning">Log in</button></router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <router-link class="nav-link active" aria-current="page" to="/signup"><button class="btn-outline-warning text-dark">Sign Up</button></router-link>
+            </li>
+            <li class="nav-item">
+                <button class="btn-warning">Log out</button>
             </li>
         </ul>
         </div>
     </div>
     </nav>
 </template>
+
+<style scoped>
+.navbar-nav{
+    align-items: center;
+}
+</style>
