@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Not Found</h1>
-    <h4>Sorry, this page can't be found.</h4>
+    <h1>Movie Detail</h1>
   </div>
 </template>
 

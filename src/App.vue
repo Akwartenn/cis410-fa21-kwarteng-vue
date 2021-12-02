@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-10 col-lg-7"></div>
-        <router-view />
+      <router-view />
     </div>
   </div>
 </template>
@@ -13,11 +13,11 @@
 import Header from "./components/Header.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    "my-header":Header,
-  }
-}
+    "my-header": Header,
+  },
+};
 </script>
 
 <style>

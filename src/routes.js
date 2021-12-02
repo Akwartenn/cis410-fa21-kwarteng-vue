@@ -1,13 +1,12 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "./components/Home.vue";
 import Login from "./components/Login.vue";
-import Movie from "./components/Movie.vue";
-import MovieDetail from "./components/MovieDetail.vue";
+import Rooms from "./components/Rooms.vue";
+import MovieDetail from "./components/RoomDetail.vue";
 import NotFound from "./components/NotFound.vue";
 import ReviewCreate from "./components/ReviewCreate.vue";
 import Signup from "./components/Signup.vue";
 import Account from "./components/Account.vue";
-
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,14 +14,14 @@ const router = createRouter({
     { path: "/", component: Home },
     { path: "/account", component: Account },
     { path: "/login", component: Login },
-    { path: "/movies", component: Movie },
+    { path: "/movies", component: Rooms },
     {
-      path: "/movies/:pk",
+      path: "/rooms/:pk",
       component: MovieDetail,
       children: [{ path: "review", component: ReviewCreate }],
     },
     { path: "/signup", component: Signup },
-    { path: "/:invalidroute(.*)", component: NotFound }
+    { path: "/:invalidroute(.*)", component: NotFound },
   ],
 });
 
