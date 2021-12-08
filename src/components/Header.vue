@@ -19,7 +19,7 @@
             <router-link
               class="nav-link active"
               aria-current="page"
-              to="/movies"
+              to="/rooms"
               >Hotel Rooms</router-link
             >
           </li>

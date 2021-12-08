@@ -17,10 +17,11 @@ export default {
   components: {
     "my-header": Header,
   },
-  // created(){
-  //   this.$store.dispatch("getRooms")
-  //   console.log("app created")
-  // }
+  created(){
+    // this.$store.dispatch("getRooms")
+    // console.log("app created")
+    this.$store.dispatch("getRooms");
+  }
   
 };
 

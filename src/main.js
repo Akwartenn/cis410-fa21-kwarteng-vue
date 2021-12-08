@@ -8,5 +8,6 @@ axios.defaults.baseURL = "https://cis410-fa21-kwarteng-api.azurewebsites.net/";
 
 const myApp = createApp(App);
 myApp.use(myRouter);
-myApp.mount("#app");
+
 myApp.use(theStore);
+myApp.mount("#app");

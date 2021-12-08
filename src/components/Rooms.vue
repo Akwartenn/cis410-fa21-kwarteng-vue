@@ -1,11 +1,40 @@
 <template>
   <div>
     <h1>Hotel Rooms</h1>
+    <hr />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>RoomType</th>
+          <th>Floor Number</th>
+          <th>Hotel</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="aRoom in theRooms" :key="aRoom.RoomPK">
+          <th>{{ aRoom.RoomType }}</th>
+          <th>{{ aRoom.FloorNumber }}</th>
+          <th>{{ aRoom.HotelName }}</th>
+          <th>
+            <router-link :to="`/rooms/${aRoom.RoomPK}`"
+              ><button class="btn btn-primary">Details</button></router-link
+            >
+          </th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    theRooms() {
+      return this.$store.state.rooms;
+    },
+  },
+};
 </script>
 
 <style></style>

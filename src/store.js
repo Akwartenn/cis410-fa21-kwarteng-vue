@@ -13,11 +13,15 @@ export default createStore({
     storeUserInApp(state, theUser) {
       state.user = theUser;
     },
+    storeRooms(state, rooms){
+      state.rooms = rooms;
+    }
   },
   actions: {
-    getRooms() {
-      axios.get("/rooms").then((myResponse) => {
-        console.log("response in /rooms", myResponse);
+    getRooms({commit}) {
+      axios.get("/rooms").then((aResponse) => {
+        console.log("response in /rooms", aResponse);
+        commit("storeRooms", aResponse.data);
       });
     },
   },
