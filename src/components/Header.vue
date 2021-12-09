@@ -45,7 +45,7 @@
           </li>
 
           <li v-if="auth" class="nav-item">
-            <button class="btn-warning" @click="onLogout">Log out</button>
+            <button class="btn-warning" @click="PleaseLogout">Log out</button>
           </li>
         </ul>
       </div>
@@ -59,10 +59,10 @@ export default {
     auth() {
       return this.$store.state.token;
     },
-    methods: {
-      onLogout() {
-        this.$store.dispatch("logout");
-      },
+  },
+  methods: {
+    PleaseLogout() {
+      this.$store.dispatch("logout");
     },
   },
 };

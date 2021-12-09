@@ -26,7 +26,7 @@ export default createStore({
   actions: {
     getRooms({ commit }) {
       axios.get("/rooms").then((aResponse) => {
-        console.log("response in /rooms", aResponse);
+        // console.log("response in /rooms", aResponse);
         commit("storeRooms", aResponse.data);
       });
     },

@@ -47,7 +47,7 @@ export default {
         Authorization: `Bearer ${this.$store.state.token}`
       }
     }).then((theResponse)=>{
-      console.log("Here is the response", theResponse);
+      // console.log("Here is the response", theResponse);
       this.reviewsByUser = theResponse.data;
     }).catch(()=>{this.accountError= true})
   }
